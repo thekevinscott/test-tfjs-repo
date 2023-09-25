@@ -19,7 +19,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: 'Lint'
+      - name: 'Test Jest'
         run: 'pnpm test:jest'
 
   test-vitest:
@@ -36,5 +36,5 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: 'Lint'
+      - name: 'Test Vitest'
         run: 'pnpm test:vitest'
