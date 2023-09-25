@@ -1,0 +1,40 @@
+name: 'Tests'
+on: [push]
+
+env:
+  TF_CPP_MIN_LOG_LEVEL: 2
+
+jobs:
+  test-jest:
+    name: 'Test Jest'
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout repository'
+        uses: actions/checkout@v2
+
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: 'Lint'
+        run: 'pnpm test:jest
+
+  test-vitest:
+    name: 'Test Vitest'
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout repository'
+        uses: actions/checkout@v2
+
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: 'Lint'
+        run: 'pnpm test:vitest
