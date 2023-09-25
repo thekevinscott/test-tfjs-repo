@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:vite": "vitest vitest.test.js",
+    "test:vitest": "vitest vitest.test.js",
     "test:jest": "jest jest.test.js"
   },
   "keywords": [],
