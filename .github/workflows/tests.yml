@@ -20,7 +20,7 @@ jobs:
         run: pnpm install
 
       - name: 'Lint'
-        run: 'pnpm test:jest
+        run: 'pnpm test:jest'
 
   test-vitest:
     name: 'Test Vitest'
@@ -37,4 +37,4 @@ jobs:
         run: pnpm install
 
       - name: 'Lint'
-        run: 'pnpm test:vitest
+        run: 'pnpm test:vitest'
