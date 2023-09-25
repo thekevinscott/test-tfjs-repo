@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:vitest": "vitest vitest.test.js",
-    "test:jest": "jest jest.test.js"
+    "test:vitest": "vitest vitest.test.js vitest2.test.js",
+    "test:jest": "jest jest.test.js jest2.test.js"
   },
   "keywords": [],
   "author": "",

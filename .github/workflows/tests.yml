@@ -38,3 +38,20 @@ jobs:
 
       - name: 'Test Vitest'
         run: 'pnpm test:vitest'
+
+  test-vitest-no-isolate:
+    name: 'Test Vitest No Isoalte'
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout repository'
+        uses: actions/checkout@v2
+
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: 'Test Vitest'
+        run: 'pnpm test:vitest --no-isolate'
